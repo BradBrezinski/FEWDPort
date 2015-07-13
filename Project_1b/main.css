@@ -9,6 +9,7 @@ body {
   font-family: Roboto;
   font-size: 12px;
   color: #424242;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5 {
@@ -23,45 +24,6 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-/*
- *
- * Media Queries - Break Points
- * 
- */
-
-
-@Media screen and (max-width: 450px) {
-    .hero { width: 100%; }
-    .newsT { width: 100%; }
-    .scores { width: 100%; }
-    .weather { width: 100%; }
-    .newsR { width: 100%; }
-}
-
-@Media screen and (min-width: 600px) {
-    .hero { width: 60%; order: 0; }
-    .weather { width: 40%; order: 1; }
-    .scores { width: 60%; order: 2; }
-    .newsT { width: 40%; order: 3; }
-    .newsR { width: 100%; order: 4; }
-}
-
-@Media screen and (min-width: 700px) {
-    .hero { width: 60%; order: 0; }
-    .weather { width: 40%; order: 1; }
-    .newsT { width: 40%; order: 2; }
-    .scores { width: 60%; order: 3; }
-    .newsR { width: 100%; order: 4; }
-}
-
-@Media screen and (min-width: 700px) {
-    .container {
-        width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 
 /*
@@ -100,29 +62,40 @@ ul {
 .header__logo {
   height: 72px;
   margin-right: 1em;
-  vertical-align: top;
+  vertical-align: middle;
   margin-top: 12px;
 }
 
 .header__title {
   font-weight: 300;
-  font-size: 4em;
   margin: 0.5em 0.25em;
   display: inline-block;
   color: #212121;
+  vertical-align: middle;
 }
 
 
 /*
  *
  * Top Level Navigation
- *
  */
 
-.nav {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+a#menu svg {
+    width: 40px;
+    fill: #000;
+}
+
+ .nav {
+    max-width: 700px;
+    position: absolute;
+    -webkit-transform: translate(-700px, 0);
+    transform: translate(-700px, 0);
+    transition: transform 0.3s ease;
+ }
+
+nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
 }
 
 .nav__list {
@@ -386,7 +359,8 @@ main {
 .snippet__title a {
   text-decoration: none;
   color: #666;
-  padding: 1.5em;.5em inherit;
+  padding: 1.5em;
+  .5em inherit;
 }
 
 .snippet__title a:hover,
@@ -417,5 +391,121 @@ footer a {
   color: #333;
   padding: 1.5em;
 }
+
+/*
+ *
+ * Media Queries - nav
+ * 
+ */
+
+/*
+If there is enough space (> 600px), 
+we keep the drawer open all the time. 
+*/
+@media (min-width: 700px) {
+
+    /* We open the drawer. */
+    nav {
+        position:relative;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    /* We use Flexbox on the parent. */
+    body {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    }
+
+    main {
+        width: auto;
+        /* Flex-grow streches the main content to 
+        fill all available space. */
+        flex-grow: 1;
+    }
+}
+
+/* If there is space (> 800px), we keep the drawer 
+open by default. */
+@media (min-width: 700px) {
+    main > #menu:after {
+        content: 'The drawer stays open if width > 600px';
+    }
+    
+    main p, nav p {
+        text-decoration: line-through;
+    }
+}
+
+/*
+ *
+ * Media Queries - Break Points
+ * 
+ */
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+        width: 100%;
+}
+
+@Media screen and (max-width: 449px) {
+    .hero { width: 100%; order: 0; }
+    .newsT { width: 100%; order: 1; }
+    .scores { width: 100%; order: 2; }
+    .weather { width: 100%; order: 3; }
+    .newsR { width: 100%; order: 4; }
+    .header__title { font-size:1.5em; }
+    .header__logo { height: 60px; }
+}
+
+@Media screen and (min-width: 450px) {
+    .hero { width: 60%; order: 0; }
+    .weather { width: 40%; order: 1; }
+    .scores { width: 100%; order: 3; }
+    .newsT { width: 100%; order: 2; }
+    .newsR { width: 100%; order: 4; }
+    .header__title { font-size:3em}
+    .header__logo { height: 80px; }
+}
+
+@Media screen and (min-width: 625px) {
+    .hero { width: 50%; order: 0; }
+    .weather { width: 50%; order: 3; }
+    .newsT { width: 50%; order: 1; }
+    .scores { width: 50%; order: 2; }
+    .newsR { width: 100%; order: 4; }
+    .header__title { font-size:4em}
+}
+
+@Media screen and (min-width: 700px) {
+    .container {
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Status API Training Shop Blog About Help
 © 2015 GitHub, Inc. Terms Privacy Security Contact
