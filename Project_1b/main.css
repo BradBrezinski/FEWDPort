@@ -31,12 +31,37 @@ ul {
  * 
  */
 
-@Media screen and (min-width: 450px) {
-    .hero { width: 50%; order: 0; }
+
+@Media screen and (max-width: 450px) {
+    .hero { width: 100%; }
+    .newsT { width: 100%; }
+    .scores { width: 100%; }
+    .weather { width: 100%; }
+    .newsR { width: 100%; }
+}
+
+@Media screen and (min-width: 600px) {
+    .hero { width: 60%; order: 0; }
     .weather { width: 40%; order: 1; }
-    .newsT { width: 50%; order: 3; }
-    .scores { width: 60%; order: 4; }
-    .newsR { width: 50%; order: 5; }
+    .scores { width: 60%; order: 2; }
+    .newsT { width: 40%; order: 3; }
+    .newsR { width: 100%; order: 4; }
+}
+
+@Media screen and (min-width: 700px) {
+    .hero { width: 60%; order: 0; }
+    .weather { width: 40%; order: 1; }
+    .newsT { width: 40%; order: 2; }
+    .scores { width: 60%; order: 3; }
+    .newsR { width: 100%; order: 4; }
+}
+
+@Media screen and (min-width: 700px) {
+    .container {
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /*
@@ -184,7 +209,6 @@ main {
 
 .top-news {
   float: right;
-  width: 100%;
   height: 300px;
   border-bottom: 1px solid #E0E0E0;
   padding: 1em;
@@ -340,6 +364,7 @@ main {
 
 .recent-news {
   clear: both;
+  width: 100%;
   padding: 1em;
 }
 
