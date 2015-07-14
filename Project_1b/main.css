@@ -74,6 +74,10 @@ ul {
   vertical-align: middle;
 }
 
+.svg__inner {
+    height: 5px;
+}
+
 
 /*
  *
@@ -87,6 +91,7 @@ a#menu svg {
 
  .nav {
     max-width: 700px;
+    height: 100%;
     position: absolute;
     -webkit-transform: translate(-700px, 0);
     transform: translate(-700px, 0);
@@ -491,7 +496,19 @@ open by default. */
     }
 }
 
+@media screen and (min-width: 450px;) and (max-width: 550px)
+    body { font-size: 1em; }
 
+    .seven-day-fc .temp-low,
+    .seven-day-fc .temp-high {
+        dispaly: inline-block;
+        width: 30%;
+    }
+    .seven-day-vd .icon {
+        width: 60px;
+        height: 60px;
+    }
+}
 
 
 
