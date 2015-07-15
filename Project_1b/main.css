@@ -55,15 +55,19 @@ ul {
 
 .header__inner {
   width: 100%;
+  height: 75px;
   margin-left: auto;
   margin-right: auto;
+  display: inline-block;
 }
 
 .header__logo {
   height: 72px;
-  margin-right: 1em;
-  vertical-align: middle;
+  margin-right: 0em;
+  vertical-align: bottom;
   margin-top: 12px;
+  margin-bottom: 5px;
+  display: inline-block;
 }
 
 .header__title {
@@ -71,13 +75,8 @@ ul {
   margin: 0.5em 0.25em;
   display: inline-block;
   color: #212121;
-  vertical-align: middle;
+  vertical-align: bottom;
 }
-
-.svg__inner {
-    height: 5px;
-}
-
 
 /*
  *
@@ -90,16 +89,14 @@ a#menu svg {
 }
 
  .nav {
-    max-width: 700px;
-    height: 100%;
+    max-width: 100%;
+    height: 50px;
     position: absolute;
-    -webkit-transform: translate(-700px, 0);
-    transform: translate(-700px, 0);
+    transform: translate(-450px, 0);
     transition: transform 0.3s ease;
  }
 
 nav.open {
-    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
 }
 
@@ -407,34 +404,31 @@ footer a {
 If there is enough space (> 600px), 
 we keep the drawer open all the time. 
 */
-@media (min-width: 700px) {
+@media (min-width: 450px) {
 
-    /* We open the drawer. */
     nav {
+        max-width: 100%;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
         position:relative;
-        -webkit-transform: translate(0, 0);
         transform: translate(0, 0);
     }
 
-    /* We use Flexbox on the parent. */
     body {
-        display: -webkit-flex;
         display: flex;
-        -webkit-flex-flow: row nowrap;
         flex-flow: row nowrap;
-    }
+    }       
 
     main {
         width: auto;
-        /* Flex-grow streches the main content to 
-        fill all available space. */
         flex-grow: 1;
     }
 }
 
 /* If there is space (> 800px), we keep the drawer 
 open by default. */
-@media (min-width: 700px) {
+@media (min-width: 800px) {
     main > #menu:after {
         content: 'The drawer stays open if width > 600px';
     }
@@ -456,7 +450,7 @@ open by default. */
 }
 
 .box {
-        width: 100%;
+    width: 100%;
 }
 
 @Media screen and (max-width: 449px) {
@@ -465,7 +459,7 @@ open by default. */
     .scores { width: 100%; order: 2; }
     .weather { width: 100%; order: 3; }
     .newsR { width: 100%; order: 4; }
-    .header__title { font-size:1.5em; }
+    .header__title { font-size:1.7em; }
     .header__logo { height: 60px; }
 }
 
@@ -475,17 +469,18 @@ open by default. */
     .scores { width: 100%; order: 3; }
     .newsT { width: 100%; order: 2; }
     .newsR { width: 100%; order: 4; }
-    .header__title { font-size:3em}
-    .header__logo { height: 80px; }
+    .header__title { font-size:2.7em}
+    .header__logo { height: 70px; }
 }
 
 @Media screen and (min-width: 625px) {
     .hero { width: 50%; order: 0; }
-    .weather { width: 50%; order: 3; }
+    .weather { width: 40%; order: 3; }
     .newsT { width: 50%; order: 1; }
-    .scores { width: 50%; order: 2; }
+    .scores { width: 60%; order: 2; }
     .newsR { width: 100%; order: 4; }
-    .header__title { font-size:4em}
+    .header__title { font-size:4em; }
+    .header__logo { height: 90px; }
 }
 
 @Media screen and (min-width: 700px) {
@@ -499,8 +494,8 @@ open by default. */
 @media screen and (min-width: 450px;) and (max-width: 550px)
     body { font-size: 1em; }
 
-    .seven-day-fc .temp-low,
-    .seven-day-fc .temp-high {
+    .weather__next .weather__next__item,
+    .weather__next .weather__next__item {
         dispaly: inline-block;
         width: 30%;
     }
@@ -509,20 +504,3 @@ open by default. */
         height: 60px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Status API Training Shop Blog About Help
-© 2015 GitHub, Inc. Terms Privacy Security Contact
