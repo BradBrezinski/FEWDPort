@@ -79,7 +79,7 @@ ul {
 }
 
 .svg {
-    color: grey;
+    color: blue;
 }
 
 /*
@@ -97,14 +97,14 @@ a#menu svg {
   height: 50px;
   position: absolute;
   /* This trasform moves the drawer off canvas. */
-  -webkit-transform: translate(-450px, 0);
+  /*-webkit-transform: translate(-450px, 0);*/
   transform: translate(-450px, 0);
   /* Optionally, we animate the drawer. */
   transition: transform 0.3s ease;
 }
 
 .nav.open {
-  -webkit-transform: translate(0, 0);
+  /*-webkit-transform: translate(0, 0);*/
   transform: translate(0, 0);
 }
 
@@ -415,10 +415,12 @@ we keep the drawer open all the time.
 @media (min-width: 450px) {
 
     nav {
+        /*
         max-width: 100%;
         height: 50px;
         margin-left: auto;
         margin-right: auto;
+        */
         position:relative;
         transform: translate(0, 0);
     }
@@ -434,8 +436,9 @@ we keep the drawer open all the time.
     }
 }
 
-/* If there is space (> 800px), we keep the drawer 
-open by default. */
+/*
+If there is space (> 800px), we keep the drawer 
+open by default.
 @media (min-width: 800px) {
     main > #menu:after {
         content: 'The drawer stays open if width > 600px';
@@ -445,6 +448,7 @@ open by default. */
         text-decoration: line-through;
     }
 }
+*/
 
 /*
  *
