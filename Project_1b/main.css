@@ -152,7 +152,7 @@ main {
 .hero {
     float: left;
     position: relative;
-    background-image: url("./images/dog.jpg");
+    background-image: url("./images/dog_med_700w.jpg");
     background-size: cover;
     height: 300px;
 }
