@@ -27,7 +27,7 @@ ul {
 }
 
 .list_item_margin {
-    margin-left: .5px;
+    margin-left: .5px;  
 }
 
 
@@ -374,7 +374,7 @@ main {
 .snippet__title a {
     text-decoration: none;
     color: #666;
-    padding: 1.5em;
+    padding: 0em;
     .5em inherit;
 }
 
@@ -433,6 +433,7 @@ footer a {
     .newsR { width: 100%; order: 4; }
     .header__title { font-size:1.7em; }
     .header__logo { height: 60px; }
+    .snippet__thumbnail { display: none; }
 }
 
 @Media screen and (min-width: 450px) {
@@ -514,4 +515,3 @@ footer a {
         display:none;
     }
 }
-
