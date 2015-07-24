@@ -30,11 +30,8 @@ ul {
     margin-left: .5px;  
 }
 
-
 /*
- *
  * Common
- * 
  */
 
 .news__more {
@@ -44,11 +41,8 @@ ul {
     text-decoration: none;
 }
 
-
 /*
- *
  * Header
- *
  */
 
 .header {
@@ -84,7 +78,6 @@ ul {
 }
 
 /*
- *
  * Top Level Navigation
  */
 
@@ -136,11 +129,8 @@ a#menu svg {
     padding: 1.5em;
 }
 
-
 /*
- *
  * Main
- *
  */
 
 main {
@@ -151,16 +141,12 @@ main {
 }
 
 /*
- *
  * Content
- *
  */
 
 
 /*
- *
  * Hero
- *
  */
 
 .hero {
@@ -190,9 +176,7 @@ main {
 }
 
 /*
- *
  * Top News
- *
  */
 
 .top-news {
@@ -234,11 +218,8 @@ main {
     text-decoration: underline;
 }
 
-
 /*
- *
  * Sport Scores
- *
  */
 
 .scores {
@@ -284,9 +265,7 @@ main {
 }
 
 /*
- *
  * Weather
- *
  */
 
 .weather {
@@ -343,11 +322,8 @@ main {
     width: 100%;
 }
 
-
 /*
- *
- * Weather
- *
+ * Weathe
  */
 
 .recent-news {
@@ -383,11 +359,8 @@ main {
     text-decoration: underline;
 }
 
-
 /*
- *
  * Footer
- *
  */
 
 footer {
@@ -407,12 +380,8 @@ footer a {
     padding: 1.5em;
 }
 
-
-
 /*
- *
  * Media Queries - Break Points
- * 
  */
 
 .content {
@@ -465,9 +434,9 @@ footer a {
 
 @Media screen and (min-width: 700px) {
     .container {
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -489,9 +458,7 @@ footer a {
 }
 
 /*
- *
  * Media Queries - nav
- * 
  */
 
 @media screen and (min-width: 450px) {
