@@ -9,16 +9,6 @@ body {
   margin-right: -30px;
 }
 
-.row-projimgleft {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-
-.row-projimgright {
-  margin-left: 0px;
-  margin-right: 15px;
-}
-
 .text-muted {
 	color: #BCBBBB;
 }
@@ -49,10 +39,6 @@ a:active {
 
 .text-thin {
 	font-weight: 100;
-}
-
-.text-untrabold {
-	font-weight: 900;
 }
 
 .title-super {
