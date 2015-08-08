@@ -2,72 +2,109 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-US-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Lession 3 Page</title>
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,900' rel='stylesheet' type='text/css'>
-        <Link rel="stylesheet" src="//normalize-css.glooglecode.come/svn/trunk">
+        <link rel="stylesheet" href="//normalize-css.glooglecode.come/svn/trunk">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <Link rel="stylesheet" href="css/style.css"
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="js/bio.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/jquery.min.js"></script>
 
     </head>
     <body>
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <img class="title-logo" src="images/udacity-logo.jpg">
+            <div class="header_inner">
+                <div class="header">
+                    <img class="header_logo" alt="images/omp.jpg" src="images/udacity-logo.jpg">
                 </div>
-                <div class="col-md-6 text-right text-uppercase">
+                <div class="header_svg header">
+                    <a id="menu_1">
+                        <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="40" viewBox="-5 -15  30 30" preserveAspectRatio="xMinYMin meet">
+                        <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="text-right text-uppercase">
                     <h1 class="title-super text-thin">Brad Brezinski</h1>
                     <h3 class="title-jobname">Front-end Ninja</h3>
                 </div>
             </div>
-            <div class="row row-topline row-highlightbackground">
-                <div class="col-md-12">
+
+            <nav id="drawer" class="col-md-12 nav">                
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="index.html">about</a></li>
+                    <li><a href="#featuredwork">featured</a></li>
+                    <li><a href="index.html">contact</a></li>
+                </ul>
+            </nav>
+
+            <main>
+                <div class="content">
+                    <div class="row-mainimg row-mainbackground">
+                        <div class="col-md-12">
+                            <img class="img-responsive img-top"  alt="images/omp.jpg" src="images/image2_1170.jpg">
+                        </div>
+                    </div>
+
+                    <div class="row text-maincolor row-mainbackground">
+                        <div class="col-md-12">
+                            <a id="featuredwork"></a>
+                            <h2 class="text-muted">Featured Work</h2>
+                        </div>
+                    </div>
+
+                    <div class="row text-center text-maincolor row-mainbackground row-projimgleft">
+                        <div class="col-md-6 text-uppercase">
+                            <img class="img-responsive" alt="images/omp.jpg" src="images/sunflower.jpg" data-toggle="modal" data-target="#project1">
+                            <h3 class="text-muted">Sunflower Project 1</h3>
+                            <p><a class="text-muted" href="index.html">Smell This One</a></p>
+                        </div>
+                        <div class="col-md-6 text-uppercase">
+                            <img class="img-responsive" alt="images/omp.jpg" src="images/sunflower3.jpg" data-toggle="modal" data-target="#project2">
+                            <h3 class="text-muted">Sunflower Project 2</h3>
+                            <p><a class="text-muted" href="index.html">company is good</a></p>
+                        </div>
+                        <div class="col-md-6 text-uppercase">
+                            <img class="img-responsive" alt="images/omp.jpg" src="images/sunflower2.jpg" data-toggle="modal" data-target="#project3">
+                            <h3 class="text-muted">Sunflower Project 3</h3>
+                            <p><a class="text-muted" href="index.html">one</a></p>
+                        </div>
+                    </div>  
                 </div>
-            </div>
-            <div class="row-mainimg row-mainbackground">
-                <div class="col-md-12">
-                    <img class="img-responsive img-top" src="images/image2_1170.jpg">
-                </div>
-            </div>
-            <div class="row text-maincolor row-mainbackground">
-                <div class="col-md-12">
-                    <h2 class="text-muted">Featured Work</h2>
-                </div>
-            </div>
-            <div class="row text-center text-maincolor row-mainbackground row-projimgleft">
-                <div class="col-md-6 text-uppercase">
-                    <img class="img-responsive" src="images/sunflower.jpg" data-toggle="modal" data-target="#project1">
-                    <h3 class="text-muted">Sunflower Project 1</h3>
-                    <p><a class="text-muted" href="index.html">Smell This One</a></p>
-                </div>
-                <div class="col-md-6 text-uppercase">
-                    <img class="img-responsive" src="images/sunflower3.jpg" data-toggle="modal" data-target="#project2">
-                    <h3 class="text-muted">Sunflower Project 2</h3>
-                    <p><a class="text-muted" href="index.html" class="text-muted">company is good</a></p>
-                </div>
-            </div>
-            <div class="row text-center text-maincolor row-mainbackground">
-                <div class="col-md-6 text-uppercase">
-                    <img class="img-responsive" src="images/sunflower2.jpg" data-toggle="modal" data-target="#project3">
-                    <h3 class="text-muted">Sunflower Project 3</h3>
-                    <p><a class="text-muted" href="index.html">one</a></p>
-                </div>
-            </div>
+            </main>
         </div>
 
-        <!-- Modal Project 1 -->
-        <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <!-- modal project 1 -->
+        <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="mymodallabel1" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
+                        <h4 class="modal-title" id="mymodallabel1">Favorite App Page</h4>
                     </div>
                     <div class="modal-body">
-                        <img class="img-responsive" src="images/555x300">
+                        <img class="img-responsive" alt="images/omp.jpg" src="images/555x300">
+                        This was my first project in this class. I learned a lot about HTML and CSS. I use used these sun flower pictures for the project photos after optimizing them.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal project 2 -->
+        <div class="modal fade" id="project2" tabindex="-1" role="dialog" aria-labelledby="mymodallabel2" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="mymodallabel2">Favorite App Page</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img class="img-responsive" alt="images/omp.jpg" src="images/555x300">
                         This was my first project in this class. I learned a lot about HTML and CSS. I use used these sun flower pictures for the project photos after optimizing them.
                     </div>
                     <div class="modal-footer">
@@ -77,15 +114,15 @@
             </div>
         </div>
 
-        <!-- Modal Project 2 -->
-        <div class="modal fade" id="project2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <!-- modal project 3 -->
+        <div class="modal fade" id="project3" tabindex="-1" role="dialog" aria-labelledby="mymodallabel3" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
+                        <h4 class="modal-title" id="mymodallabel3">Favorite App Page</h4>
                     </div>
                     <div class="modal-body">
-                        <img class="img-responsive" src="images/555x300">
+                        <img class="img-responsive" alt="images/omp.jpg" src="images/555x300">
                         This was my first project in this class. I learned a lot about HTML and CSS. I use used these sun flower pictures for the project photos after optimizing them.
                     </div>
                     <div class="modal-footer">
@@ -95,23 +132,29 @@
             </div>
         </div>
 
-        <!-- Modal Project 3 -->
-        <div class="modal fade" id="project3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
-                    </div>
-                    <div class="modal-body">
-                        <img class="img-responsive" src="images/555x300">
-                        This was my first project in this class. I learned a lot about HTML and CSS. I use used these sun flower pictures for the project photos after optimizing them.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
+        <script>
+            /* Open the drawer when the menu ison is clicked.*/
+            var menu_1 = document.querySelector('#menu_1');
+            var main = document.querySelector('main');
+            var drawer = document.querySelector('#drawer');
+            
+            menu_1.addEventListener('click', function(e) {
+                drawer.classList.toggle('open');
+                e.stopPropagation();
+            });
+            
+            main.addEventListener('click', function() {
+                drawer.classList.remove('open');
+            });
+        </script>
+
+        <footer>
+            <div class="columns-12">
+                <div class="row-bottomline_2 row-footerbackground_2">
+                    <a href="mailto:BRAD.BREZINSKI@GMAIL.COM?Subject=Resume%20Website%20Inquiry" target="_top"><p class="text-bottomline_2">BRAD.BREZINSKI@GMAIL.COM</p></a>
                 </div>
             </div>
-        </div>    
+        </footer>
 
     </body>
 </html>
